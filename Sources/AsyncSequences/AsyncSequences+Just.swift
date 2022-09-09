@@ -22,13 +22,13 @@ public struct AsyncJustSequence<Element>: AsyncSequence {
     public typealias Element = Element
     public typealias AsyncIterator = Iterator
 
-    var element: () async throws -> Element
+    var element: @Sendable () async throws -> Element
 
     public init(_ element: Element) {
         self.element = { element }
     }
 
-    public init(_ element: @escaping () async throws -> Element) {
+    public init(_ element: @escaping @Sendable () async throws -> Element) {
         self.element = element
     }
 
@@ -48,3 +48,4 @@ public struct AsyncJustSequence<Element>: AsyncSequence {
         }
     }
 }
+extension AsyncJustSequence: Sendable where Element: Sendable {}

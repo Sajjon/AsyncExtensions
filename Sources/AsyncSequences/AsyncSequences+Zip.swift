@@ -302,3 +302,7 @@ actor SequenceIndexGenerator {
         return index
     }
 }
+
+extension AsyncZipSequence: Sendable where UpstreamAsyncSequence: Sendable {}
+extension AsyncZip2Sequence: Sendable where UpstreamAsyncSequenceA: Sendable, UpstreamAsyncSequenceB: Sendable {}
+extension AsyncZip3Sequence: Sendable where UpstreamAsyncSequenceA: Sendable, UpstreamAsyncSequenceB: Sendable, UpstreamAsyncSequenceC: Sendable {}

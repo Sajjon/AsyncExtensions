@@ -33,3 +33,4 @@ public struct AsyncEmptySequence<Element>: AsyncSequence {
         }
     }
 }
+extension AsyncEmptySequence: Sendable where Element: Sendable {}

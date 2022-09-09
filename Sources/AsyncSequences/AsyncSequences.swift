@@ -10,7 +10,7 @@ public enum AsyncSequences {}
 
 public extension AsyncSequences {
     /// Represents a time interval in nanoseconds
-    struct Interval: Equatable {
+    struct Interval: Equatable, Sendable {
         let value: UInt64
 
         /// Represents an imediate time interval
