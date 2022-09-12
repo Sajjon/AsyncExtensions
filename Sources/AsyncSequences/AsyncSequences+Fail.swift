@@ -46,3 +46,4 @@ public struct AsyncFailSequence<Element>: AsyncSequence {
         }
     }
 }
+extension AsyncFailSequence: Sendable where Element: Sendable {}

@@ -68,3 +68,4 @@ public struct AsyncFromSequence<BaseSequence: Sequence>: AsyncSequence {
         }
     }
 }
+extension AsyncFromSequence: Sendable where Element: Sendable, BaseSequence: Sendable {}

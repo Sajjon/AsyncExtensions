@@ -149,3 +149,4 @@ public struct AsyncSwitchToLatestSequence<UpstreamAsyncSequence: AsyncSequence>:
         }
     }
 }
+extension AsyncSwitchToLatestSequence: Sendable where UpstreamAsyncSequence: Sendable {}

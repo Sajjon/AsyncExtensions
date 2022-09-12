@@ -188,3 +188,5 @@ public struct AsyncMergeSequence<UpstreamAsyncSequence: AsyncSequence>: AsyncSeq
         }
     }
 }
+
+extension AsyncMergeSequence: Sendable where UpstreamAsyncSequence: Sendable {}
