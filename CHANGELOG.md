@@ -1,3 +1,12 @@
+Make these AsyncSequences Sendable (if Element or Upstream is Sendable):
+* Empty
+* FAil
+* From
+* Just
+* Merge
+* Zip, Zip2, Zip3
+
+
 **v0.4.0 - Bore:**
 
 - AsyncStreams: new @Streamed property wrapper

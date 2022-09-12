@@ -152,3 +152,4 @@ public struct AsyncWithLatestFromSequence<UpstreamAsyncSequence: AsyncSequence, 
         }
     }
 }
+extension AsyncWithLatestFromSequence: Sendable where UpstreamAsyncSequence: Sendable, OtherAsyncSequence: Sendable {}
